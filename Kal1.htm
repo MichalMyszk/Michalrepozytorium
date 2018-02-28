@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="" />
+    <meta http-equiv="content-language"content="pl"/>
+    
+    <link rel="Shortcut icon" href="https://thumbs.dreamstime.com/z/s%C5%82o%C5%84ce-rysunek-26101691.jpg">
+	<title>Prognoza pogody</title>
+</head>
+
+<body>
+<div id="header" style="color:black" style=" height: 150px;" >
+ 
+  <h1><b><i><center>Prognoza pogody</center></b></i></h1>
+
+  </p>
+  
+</div>
+  <SCRIPT LANGUAGE="JavaScript" >
+// skrypt pobrano z http://szablony.freeware.info.pl
+miesiac = new Array(12)
+miesiac[0] = "stycznia "
+miesiac[1] = "lutego "
+miesiac[2] = "marca "
+miesiac[3] = "kwietnia "
+miesiac[4] = "maja "
+miesiac[5] = "czerwca "
+miesiac[6] = "lipca "
+miesiac[7] = "sierpnia "
+miesiac[8] = "wrzeúnia "
+miesiac[9] = "paüdziernika "
+miesiac[10] = "listopada "
+miesiac[11] = "grudnia "
+dzien = new Array(7)
+dzien[0] = "Niedziela "
+dzien[1] = "Poniedzia≥ek "
+dzien[2] = "Wtorek "
+dzien[3] = "åroda "
+dzien[4] = "Czwartek "
+dzien[5] = "Piπtek "
+dzien[6] = "Sobota "
+function podaj_date(){
+var Dzisiaj = new Date()
+var Tygodnia = Dzisiaj.getDay()
+var Miesiac = Dzisiaj.getMonth()
+var Dnia = Dzisiaj.getDate()
+var Rok = Dzisiaj.getFullYear()
+if(Rok <= 99) Rok += 1900
+return dzien[Tygodnia] + "," + " " + Dnia + " " + miesiac[Miesiac] + " " + Rok +"r." }
+//-->
+</SCRIPT>
+<SCRIPT>document.write(podaj_date())</SCRIPT>
+
+
+<div id="pole" style="color:black" style=" height: 100px;" >
+</div>
+
+ 
+
+<form method="post" action="prognoza3.php"   >
+  <fieldset style="background-color: #e6f3ff; height: 100px;">
+    <legend><h4><b>Wprowadü nazwÍ miasta</b></h4></legend> 
+    Wybrane miasto to:
+    <input type="text" name="Miasto" />
+    <input type="submit" name="s1" value="Szukaj"/>
+  </fieldset>
+</form>
+
+
+
+
+
+
+
+</body>
+</html>
